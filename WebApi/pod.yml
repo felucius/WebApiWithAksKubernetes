@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: webapi-weather
+  labels:
+    app: webapi-aks
+    component: netcore-app
+spec:
+  containers:
+    - image: webapiacr.azurecr.io/webapiaks:0.0.1
+      name: webapi
+      ports:
+        - containerPort: 80
